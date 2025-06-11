@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sarthak Pujari</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/icon.ico') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/main.css') }}"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='assets/css/noscript.css') }}"
+      />
+    </noscript>
+  </head>
+
+  <body class="is-preload">
+    <div id="wrapper" class="fade-in">
+      <div id="intro">
+        <h1>Sarthak Pujari</h1>
+        <p>
+          Computer Engineering student passionate about software development,
+          machine learning, and competitive programming.
+        </p>
+      </div>
+
+      <header id="header">
+        <a href="/" class="logo">Home</a>
+      </header>
+
+      <nav id="nav">
+        <ul class="links">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/about">About Me</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div id="main">
+        <article class="post featured">
+          <header class="major">
+            <span class="date">June 2025</span>
+            <h2><a href="#">Personal Portfolio Website</a></h2>
+            <p>
+              Designed and developed this responsive one-page portfolio using
+              Flask, HTML5 UP template, and Python backend integration. Deployed
+              using Render and GitHub.
+            </p>
+          </header>
+        </article>
+
+        <section class="post">
+          <header class="major">
+            <h2>Skills</h2>
+            <p>
+              <strong>Languages:</strong> Python, C++, HTML, CSS, JavaScript<br />
+              <strong>Frameworks:</strong> Flask, Django (learning)<br />
+              <strong>Libraries:</strong> Pandas, NumPy, Scikit-learn,
+              Matplotlib, Seaborn<br />
+              <strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook
+            </p>
+          </header>
+        </section>
+
+        <section class="post">
+          <header class="major">
+            <h2>Learning & Interests</h2>
+            <p>
+              <strong>Machine Learning:</strong> Currently learning ML through
+              hands-on projects using Scikit-learn, Python data tools, and
+              PyTorch.<br /><br />
+
+              <strong>Competitive Programming:</strong> Practicing
+              problem-solving regularly on platforms like
+              <a
+                href="https://codeforces.com/profile/Sarthakzzzzz"
+                target="_blank"
+                >Codeforces</a
+              >,
+              <a
+                href="https://www.codechef.com/users/Sarthakzzzzz"
+                target="_blank"
+                >CodeChef</a
+              >, and
+              <a href="https://atcoder.jp/users/Sarthakzzzzz" target="_blank"
+                >AtCoder</a
+              >. Focused on improving algorithms and data structures
+              understanding.
+            </p>
+          </header>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <section>
+          <form method="POST" action="/submit_form">
+            <div class="fields">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Send Message" /></li>
+            </ul>
+          </form>
+        </section>
+
+        <section class="split contact">
+          <section class="alt">
+            <h3>Address</h3>
+            <p>Koregaon Park, Pune</p>
+          </section>
+
+          <section>
+            <h3>Email</h3>
+            <p><a href="#">sarthakpujari1970@gmail.com</a></p>
+          </section>
+
+          <section>
+            <h3>Social</h3>
+            <ul class="icons alt">
+              <li>
+                <a
+                  href="https://github.com/Sarthakzzzzz"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://atcoder.jp/users/Sarthakzzzzz"
+                  class="icon brands alt fa-codeforces"
+                  ><span class="label">Codeforces</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/sarthakzzzzz/"
+                  class="icon brands alt fa-linkedin"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  </body>
+</html>

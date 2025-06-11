@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - Sarthak</title>
+    <link rel="stylesheet" href="./static/assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="./static/assets/css/noscript.css"
+    /></noscript>
+  </head>
+
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='images/icon.ico') }}"
+  />
+  <body class="is-preload">
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <a href="/about" class="logo">About</a>
+      </header>
+
+      <!-- Navigation -->
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li class="active"><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="main">
+        <section class="post">
+          <header class="major">
+            <span class="date">June 2025</span>
+            <h1>About Me</h1>
+            <p>
+              I'm Sarthak — a Computer Engineering student at SPPU with a strong
+              passion for software development, machine learning, and
+              competitive programming. I enjoy solving real-world problems with
+              code and continuously explore new technologies.
+            </p>
+          </header>
+
+          <!-- Skills Section -->
+          <section>
+            <h2>Skills</h2>
+            <ul>
+              <li><strong>Languages:</strong> Python, C++, JavaScript</li>
+              <li><strong>Web:</strong> HTML, CSS, React</li>
+              <li><strong>Machine Learning:</strong> PyTorch, TensorFlow</li>
+              <li><strong>Databases:</strong> MySQL, MongoDB</li>
+              <li><strong>Tools:</strong> Git, GitHub</li>
+            </ul>
+          </section>
+
+          <!-- Learning & Interests -->
+          <section>
+            <h2>Learning & Interests</h2>
+            <ul>
+              <li>
+                <strong>Machine Learning:</strong> Exploring deep learning
+                models using PyTorch and TensorFlow.
+              </li>
+              <li>
+                <strong>Competitive Programming:</strong> Regular participant in
+                contests to improve algorithmic thinking.
+              </li>
+              <li>
+                <strong>Project Development:</strong> Currently focused on
+                building my personal portfolio website using Django.
+              </li>
+            </ul>
+          </section>
+
+          <!-- Competitive Programming -->
+          <section>
+            <h2>Competitive Programming</h2>
+            <p>
+              I actively participate in online contests on platforms like
+              <a href="https://codeforces.com/" target="_blank">Codeforces</a>,
+              <a href="https://www.codechef.com/" target="_blank">CodeChef</a>,
+              <a href="https://atcoder.jp/" target="_blank">AtCoder</a>, and
+              <a href="https://leetcode.com/" target="_blank">LeetCode</a>.
+            </p>
+            <p>
+              My goal is to strengthen my data structures and algorithmic skills
+              by consistently solving problems on these platforms. I regularly
+              work on topics like dynamic programming, graphs, number theory,
+              and greedy algorithms.
+            </p>
+            <p>
+              Competitive programming has helped me develop logical thinking,
+              time management, and the ability to perform under pressure. I
+              treat every contest as a chance to learn and grow.
+            </p>
+          </section>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <form method="POST" action="/submit_form">
+            <div class="fields">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Send Message" /></li>
+            </ul>
+          </form>
+        </section>
+        <section class="split contact">
+          <section class="alt">
+            <h3>Address</h3>
+            <p>Koregaon Park, Pune</p>
+          </section>
+
+          <section>
+            <h3>Email</h3>
+            <p><a href="#">sarthakpujari1970@gmail.com</a></p>
+          </section>
+          <section>
+            <h3>Social</h3>
+            <ul class="icons alt">
+              <li>
+                <a
+                  href="https://github.com/Sarthakzzzzz"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://atcoder.jp/users/Sarthakzzzzz"
+                  class="icon brands alt fa-codeforces"
+                  ><span class="label">Codeforces</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/sarthakzzzzz/"
+                  class="icon brands alt fa-linkedin"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+        <ul>
+          <li>&copy; Sarthak</li>
+          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./static/assets/js/jquery.min.js"></script>
+    <script src="./static/assets/js/jquery.scrollex.min.js"></script>
+    <script src="./static/assets/js/jquery.scrolly.min.js"></script>
+    <script src="./static/assets/js/browser.min.js"></script>
+    <script src="./static/assets/js/breakpoints.min.js"></script>
+    <script src="./static/assets/js/util.js"></script>
+    <script src="./static/assets/js/main.js"></script>
+  </body>
+</html>
