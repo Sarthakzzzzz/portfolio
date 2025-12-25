@@ -84,7 +84,10 @@ portfolio/
 │   └── images/           # Images and icons
 ├── templates/            # HTML templates
 ├── server.py            # Main Flask application
+├── flask_app.py         # WSGI file for PythonAnywhere
 ├── requirements.txt     # Python dependencies
+├── .env                 # Environment variables (not in repo)
+├── .gitignore          # Git ignore file
 └── README.md           # Project documentation
 ```
 
@@ -92,14 +95,42 @@ portfolio/
 
 ### PythonAnywhere Deployment
 
-1. Upload files to PythonAnywhere
-2. Install dependencies in console
-3. Configure WSGI file
-4. Set environment variables
-5. Configure static files
-6. Reload web app
+1. **Upload Files**
+   - Upload all project files to `/home/yourusername/mysite/`
+   - Or clone from GitHub: `git clone https://github.com/Sarthakzzzzz/portfolio.git mysite`
 
-Detailed deployment instructions available in the repository.
+2. **Install Dependencies**
+   ```bash
+   cd /home/yourusername/mysite
+   pip3.10 install --user -r requirements.txt
+   ```
+
+3. **Configure WSGI File**
+   - Go to Web tab in PythonAnywhere dashboard
+   - Set source code path: `/home/yourusername/mysite`
+   - Set WSGI configuration file: `/var/www/yourusername_pythonanywhere_com_wsgi.py`
+   - Replace content with:
+   ```python
+   import sys
+   import os
+   
+   path = '/home/yourusername/mysite'
+   if path not in sys.path:
+       sys.path.insert(0, path)
+   
+   from server import app as application
+   ```
+
+4. **Environment Variables**
+   - Create `.env` file in `/home/yourusername/mysite/`
+   - Add all required environment variables
+
+5. **Static Files**
+   - URL: `/static/`
+   - Directory: `/home/yourusername/mysite/static/`
+
+6. **Reload Web App**
+   - Click "Reload" button in Web tab
 
 ## 📧 Contact
 
