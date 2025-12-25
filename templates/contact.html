@@ -25,6 +25,7 @@
         <ul class="links">
           <li><a href="/">Home</a></li>
           <li><a href="about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
           <li class="active"><a href="contact">Contact</a></li>
         </ul>
       </nav>
@@ -40,6 +41,15 @@
               automation, I'm ready to contribute with passion and precision.
             </p>
           </header>
+
+          {% with messages = get_flashed_messages(with_categories=true) %} {% if
+          messages %} {% for category, message in messages %}
+          <p
+            style="color: {% if category == 'error' %}red{% else %}green{% endif %}; text-align: center; font-weight: bold;"
+          >
+            {{ message }}
+          </p>
+          {% endfor %} {% endif %} {% endwith %}
 
           <!-- Contact Form -->
           <form method="POST" action="/submit_form">

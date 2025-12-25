@@ -1,77 +1,62 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Thank You</title>
-      <link rel="stylesheet" href="./static/assets/css/main.css" />
-      <noscript
-        ><link rel="stylesheet" href="./static/assets/css/noscript.css"
-      /></noscript>
-    </head>
+  <head>
+    <title>Thank You - Sarthak</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
     <link
-          rel="shortcut icon"
-          href="{{ url_for('static', filename='images/icon.ico') }}"
-        />
-<body class="is-preload">
-
-	<!-- Wrapper -->
-	<div id="wrapper">
-
-		<!-- Header -->
-		<header id="header">
-			<a href="/contact" class="logo">Hire Me</a>
-		</header>
-
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="/">Home</a></li>
-				<li><a href="about">About</a></li>
-				<li class="active"><a href="contact">Contact</a></li>
-			</ul>
-
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-
-			<!-- Contact Form -->
-			<section class="post">
-				<header class="major">
-					<h1>Hire Me</h1>
-					<p>Let's collaborate and build something great! Whether it's a Competitive Programming, a machine
-						learning model, or system-level automation, I'm ready to contribute with passion and precision.
-					</p>
-				</header>
-				<h3>{{name}} Thank You!</h3>
-                <h5> I will get back to you as soon as possible.</h5>
-			</section>
-
-			<!-- Copyright -->
-			<div id="copyright">
-				<ul>
-					<li>All Rights Reserved</li>
-				</ul>
-			</div>
-
-		</div>
-
-		<!-- Scripts -->
-		<script src="./static/assets/js/jquery.min.js"></script>
-		<script src="./static/assets/js/jquery.scrollex.min.js"></script>
-		<script src="./static/assets/js/jquery.scrolly.min.js"></script>
-		<script src="./static/assets/js/browser.min.js"></script>
-		<script src="./static/assets/js/breakpoints.min.js"></script>
-		<script src="./static/assets/js/util.js"></script>
-		<script src="./static/assets/js/main.js"></script>
-
-</body>
-
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/main.css') }}"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='assets/css/noscript.css') }}"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <a href="/" class="logo">Thank You</a>
+      </header>
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Me</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="main">
+        <section class="post">
+          <header class="major">
+            <h1>Message Sent!</h1>
+            <p>
+              Thank you for contacting me. I will get back to you as soon as
+              possible.
+            </p>
+          </header>
+          <ul class="actions special">
+            <li><a href="/" class="button">Back to Home</a></li>
+          </ul>
+        </section>
+      </div>
+      <div id="copyright">
+        <ul>
+          <li>&copy; Sarthak</li>
+          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+  </body>
 </html>

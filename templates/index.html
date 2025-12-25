@@ -21,16 +21,45 @@
         href="{{ url_for('static', filename='assets/css/noscript.css') }}"
       />
     </noscript>
+    <style>
+      .cp-icon img {
+        transition: transform 0.3s ease;
+      }
+      .cp-icon:hover img {
+        transform: scale(1.1);
+      }
+    </style>
   </head>
 
   <body class="is-preload">
     <div id="wrapper" class="fade-in">
-      <div id="intro">
+      <div
+        id="intro"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        "
+      >
         <h1>Sarthak Pujari</h1>
         <p>
-          Computer Engineering student passionate about software development,
-          machine learning, and competitive programming.
+          Computer Engineering student skilled in full-stack development
+          (Next.js, Spring Boot, Django) and algorithmic problem solving (1000+
+          problems, Codeforces Pupil). Passionate about writing clean, scalable
+          code and eager to contribute to impactful software projects as an
+          intern.
         </p>
+        <ul class="actions">
+          <li>
+            <a
+              href="#header"
+              class="button icon solid solo fa-arrow-down scrolly"
+              >Continue</a
+            >
+          </li>
+        </ul>
       </div>
 
       <header id="header">
@@ -41,6 +70,7 @@
         <ul class="links">
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/about">About Me</a></li>
+          <li><a href="/projects">Projects</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
@@ -48,55 +78,102 @@
       <div id="main">
         <article class="post featured">
           <header class="major">
-            <span class="date">June 2025</span>
-            <h2><a href="#">Personal Portfolio Website</a></h2>
+            <span class="date">Jan 2026</span>
+            <h2>
+              <a href="#">CP Profiles</a>
+            </h2>
             <p>
-              Designed and developed this responsive one-page portfolio using
-              Flask, HTML5 UP template, and Python backend integration. Deployed
-              using Render and GitHub.
+              I actively participate in coding contests to improve my
+              algorithmic thinking.
             </p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                margin-top: 20px;
+              "
+            >
+              <a
+                href="https://codeforces.com/profile/Sarthakzzzzz"
+                target="_blank"
+                style="border-bottom: none"
+                class="cp-icon"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/codeforces.png') }}"
+                  alt="Codeforces"
+                  style="height: 60px"
+                />
+              </a>
+              <a
+                href="https://www.codechef.com/users/sarthakzzzzz"
+                target="_blank"
+                style="border-bottom: none"
+                class="cp-icon"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/codechef.svg') }}"
+                  alt="CodeChef"
+                  style="height: 60px"
+                />
+              </a>
+              <a
+                href="https://atcoder.jp/users/sarthakzzzzz"
+                target="_blank"
+                style="border-bottom: none"
+                class="cp-icon"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/atcoder.png') }}"
+                  alt="AtCoder"
+                  style="height: 60px"
+                />
+              </a>
+              <a
+                href="https://leetcode.com/u/sarthakzzzzz/"
+                target="_blank"
+                style="border-bottom: none"
+                class="cp-icon"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/leetcode.png') }}"
+                  alt="LeetCode"
+                  style="height: 60px"
+                />
+              </a>
+            </div>
           </header>
         </article>
 
         <section class="post">
-          <header class="major">
-            <h2>Skills</h2>
-            <p>
-              <strong>Languages:</strong> Python, C++, HTML, CSS, JavaScript<br />
-              <strong>Frameworks:</strong> Flask, Django (learning)<br />
-              <strong>Libraries:</strong> Pandas, NumPy, Scikit-learn,
-              Matplotlib, Seaborn<br />
-              <strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook
-            </p>
-          </header>
-        </section>
-
-        <section class="post">
-          <header class="major">
-            <h2>Learning & Interests</h2>
-            <p>
-              <strong>Machine Learning:</strong> Currently learning ML through
-              hands-on projects using Scikit-learn, Python data tools, and
-              PyTorch.<br /><br />
-
-              <strong>Competitive Programming:</strong> Practicing
-              problem-solving regularly on platforms like
-              <a
-                href="https://codeforces.com/profile/Sarthakzzzzz"
-                target="_blank"
-                >Codeforces</a
-              >,
-              <a
-                href="https://www.codechef.com/users/Sarthakzzzzz"
-                target="_blank"
-                >CodeChef</a
-              >, and
-              <a href="https://atcoder.jp/users/Sarthakzzzzz" target="_blank"
-                >AtCoder</a
-              >. Focused on improving algorithms and data structures
-              understanding.
-            </p>
-          </header>
+          <h2>Skills</h2>
+          <p>
+            <strong>Languages:</strong> C, C++, Python, Java, SQL<br />
+            <strong>Frameworks:</strong> Next.js 15, Spring Boot, Django,
+            Flask<br />
+            <strong>Databases:</strong> MongoDB, MySQL<br />
+            <strong>Tools:</strong> Git/GitHub, Render, Postman, Docker<br />
+            <strong>AI/ML:</strong> spaCy, Scikit-learn
+          </p>
+          <hr />
+          <h2>Experience</h2>
+          <p>
+            <strong>Technical Team Member - CodeStorm Club</strong><br />
+            Conducted Data Structure and Algorithms workshops for 30+ students.
+            Mentored juniors in C++, Python, and competitive programming.
+            Coordinated coding contests and participated in code reviews.
+          </p>
+          <hr />
+          <h2>Achievements</h2>
+          <p>
+            Solved 1000+ problems across Codeforces (Pupil), CodeChef (3 star),
+            and LeetCode.<br />
+            Top 30% in College Competitive Programming Contest (out of 600+
+            participants).<br />
+            Completed 'The Complete Python Developer' (Udemy) – Data Science,
+            REST APIs & Automation.
+          </p>
         </section>
       </div>
 
@@ -132,6 +209,11 @@
           <section class="alt">
             <h3>Address</h3>
             <p>Koregaon Park, Pune</p>
+          </section>
+
+          <section>
+            <h3>Phone</h3>
+            <p><a href="#">+91 87889 71047</a></p>
           </section>
 
           <section>

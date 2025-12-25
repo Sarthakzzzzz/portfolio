@@ -1,0 +1,122 @@
+\documentclass[a4paper,11pt]{extarticle}
+\usepackage[utf8]{inputenc}
+% Using Computer Modern (LaTeX default) for professional appearance
+\usepackage{xcolor}
+\definecolor{primary}{rgb}{0,0,0}      
+\definecolor{secondary}{rgb}{0.1,0.1,0.1}
+\usepackage{geometry}
+\geometry{a4paper,margin=0.75cm, top=0.75cm, bottom=0.75cm} % Aggressive margins
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\color{primary}\raggedright}{}{0em}{}[{\color{primary}\titlerule}]
+\titlespacing{\section}{0pt}{3pt}{2pt} % Minimal section spacing
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+% ICONS + HYPERLINKS
+\usepackage{fontawesome5}                 
+\usepackage[hidelinks]{hyperref}          
+\definecolor{linkcolour}{rgb}{0.1,0.1,0.1}   
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour,pdfborder={0 0 0}}
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\underline{#2}}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{Sarthak Pujari}} \\[2pt]
+    \href{tel:+918788971047}{+91 87889 71047} \;|\; 
+    \href{mailto:sarthakpujari1970@gmail.com}{sarthakpujari1970@gmail.com} \;|\; 
+    \href{https://www.linkedin.com/in/sarthakzzzzz/}{LinkedIn} \;|\; 
+    \href{https://github.com/Sarthakzzzzz}{GitHub} \;|\; 
+    \href{https://sarthakzzzzz.pythonanywhere.com/}{Portfolio}
+\end{center}
+
+\vspace{0.05cm}
+\section{Summary}
+\vspace{0.2cm}
+Computer Engineering student skilled in full-stack development (Next.js, Spring Boot, Django) and
+algorithmic problem solving (1000+ problems, Codeforces Pupil). Passionate about writing clean, scalable code and
+eager to contribute to impactful software projects as an intern.
+
+% Education
+\section{Education}    
+\vspace{0.2cm}
+\begin{tabular}{p{15.5cm}r}
+Bachelor of Engineering in \textit{Computer Engineering} &\textbf{ 2023-2027} \\
+Savitribai Phule Pune University (Modern Education Society's College Of Engineering, Pune) & \textbf{CGPA: 8.33} \\
+\end{tabular}
+%  ----- technical skills  ------ %
+\vspace{0.1cm}
+\section{Technical Skills}
+\vspace{0.2cm}
+\begin{tabular}{l|p{14cm}}
+    \textbf{Languages} & \textbf{C, C++, Python, Java, SQL} \\
+    \textbf{Frameworks} & \textbf{Next.js 15, Spring Boot, Django, Flask} \\
+    \textbf{Databases} & \textbf{MongoDB, MySQL} \\
+    \textbf{Tools} & \textbf{Git/GitHub, Render, Postman, Docker} \\
+    \textbf{AI/ML} & \textbf{spaCy, Scikit-learn} \\
+    \textbf{Soft Skills} & \textbf{Teamwork, Collaboration, Mentorship} \\
+\end{tabular}
+
+%  ----- Projects  ------ %
+\vspace{0.2cm}
+\section{Projects}
+\vspace{0.2cm}
+\begin{enumerate}[leftmargin=0.55cm, rightmargin=0.2cm, itemsep=0.1cm]
+
+% --- Project 1: ProgCorn ----%
+\item \textbf{\underline{ProgCorn}} \raisebox{-0.8ex}{\rule{0.5pt}{1em}} \href{https://github.com/Sarthakzzzzz/ProgCorn}{\textcolor{blue}{\textbf{GitHub}}} 
+ \rule{0.5pt}{1em}
+\underline{Next.js 15, TypeScript, Prisma, SQLite}
+\begin{itemize}[leftmargin=0.4cm, itemsep=0.1em,topsep = 0pt]
+    \item Built a full-stack competitive-programming resource hub that auto-syncs contests from 50+ platforms via Clist.by API
+    \item Node.js + Next.js + Prisma backend with JWT auth, bcrypt hashing
+    \item Automated contest syncing using scheduled tasks (node-cron)
+    \item Implemented admin dashboard for content moderation and report handling (12+ Prisma schemas)
+\end{itemize}
+% --- Project 2: NotesApp ---- %
+\item \textbf{\underline{Secure Notes Application}} \rule{0.5pt}{1em} \href{https://github.com/Sarthakzzzzz/NotesApp}{\textcolor{blue}{\textbf{GitHub}}}  \rule{0.5pt}{1em}
+\underline{Java, Spring Boot, React, H2}
+\begin{itemize}[leftmargin=0.4cm, itemsep=0.1em,topsep = 0pt]
+    \item Full-stack secure note-taking app with user authentication using Spring Security + JWT
+    \item Client-side encryption before storage; RESTful APIs with Spring Data JPA
+    \item Responsive React frontend; deployed on Render
+\end{itemize}
+
+%--- Project 3: RateMyResume ---- %
+\item \textbf{\underline{RateMyResume}} \rule{0.5pt}{1em} \href{https://github.com/Sarthakzzzzz/RateMyResume}{\textcolor{blue}{\textbf{GitHub}}}  \rule{0.5pt}{1em} \underline{Python, Django, spaCy, Pandas}
+\begin{itemize}[leftmargin=0.4cm, itemsep=0.1em,topsep = 0pt]
+   \item Created an automated resume scoring tool using NLP (spaCy) and TF-IDF to compare candidate skills with job descriptions
+    \item Supports PDF/DOCX parsing and provides feedback on 15+ metrics (ATS compatibility, keyword match, etc.)
+    \item Streamlined data extraction and evaluation for quick resume reviews
+\end{itemize}
+\end{enumerate}
+% Experience & Leadership
+\vspace{0.1cm}
+\section{Experience \& Extracurriculars}
+\vspace{0.2cm}
+\noindent\textbf{Technical Team Member} \hfill \textbf{CodeStorm Club}
+\begin{itemize}[leftmargin=0.6cm, itemsep=0.2em]
+    \item Conducted Data Structure and Algorithms workshops for 30+ students; reviewed code in C++/Python.
+    \item Mentored juniors in C++, Python, and competitive programming through code review and debugging sessions.
+    \item Coordinated coding contests in DSA workshop.
+    \item Participated in team code reviews and collaborative debugging sessions
+\end{itemize}
+%Achievements
+\vspace{0.4cm}
+\section{Achievements}
+\vspace{0.2cm}
+\begin{itemize}[leftmargin=0.6cm, itemsep=0.2em]
+    \item Solved \href{https://codolio.com/profile/sarthakzzzzz}{\textbf{1000+}} problems across 
+          \href{https://codeforces.com/profile/Sarthakzzzzz}{\textbf{Codeforces}} (Pupil, peak 1386),
+          \href{https://www.codechef.com/users/sarthakzzzzz}{\textbf{CodeChef}} (3 star, peak 1625), \href{https://leetcode.com/u/sarthakzzzzz/}{\textbf{LeetCode}} etc.
+    \item \href{https://drive.google.com/drive/folders/1SY3BDjUbQYmKBQpvZ_rSyc_UuJDKJMu7?usp=sharing}{\textbf{College Competitive Programming Contest}} – Top 30\% (out of 600+ participants), solved 4/7 problems
+    \item \href{https://drive.google.com/file/d/1YbFt0eQOKLu8GL_ZjFCowYhUwbh8K_r8/view?usp=drive_link}{\textbf{The Complete Python Developer}} (Udemy) – Data Science, REST APIs \& Automation
+\end{itemize}
+\vspace{0.2cm}
+\end{document}
