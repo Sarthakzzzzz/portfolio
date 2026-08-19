@@ -1,148 +1,42 @@
-# AI-Powered Portfolio Website
+# Portfolio Blog Starter
 
-A modern Flask-based portfolio website with intelligent email responses powered by AI.
+This is a porfolio site template complete with a blog. Includes:
 
-## 🚀 Features
+- MDX and Markdown support
+- Optimized for SEO (sitemap, robots, JSON-LD schema)
+- RSS Feed
+- Dynamic OG images
+- Syntax highlighting
+- Tailwind v4
+- Vercel Speed Insights / Web Analytics
+- Geist font
 
-- **Responsive Design**: Modern, mobile-friendly portfolio layout
-- **AI Email Responses**: Intelligent, personalized email replies using OpenRouter API
-- **Contact Management**: MongoDB integration for storing contact submissions
-- **Email Integration**: Gmail SMTP for reliable email delivery
-- **Resume Integration**: Dynamic resume context for AI responses
+## Demo
 
-## 🛠️ Tech Stack
+https://portfolio-blog-starter.vercel.app
 
-- **Backend**: Flask, Python
-- **AI**: OpenAI SDK with OpenRouter (Xiaomi MiMo v2 Flash)
-- **Database**: MongoDB
-- **Email**: Gmail SMTP
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Deployment**: PythonAnywhere ready
+## How to Use
 
-## 📋 Prerequisites
+You can choose from one of the following two methods to use this repository:
 
-- Python 3.8+
-- MongoDB account (MongoDB Atlas recommended)
-- Gmail account with App Password
-- OpenRouter API key
+### One-Click Deploy
 
-## ⚙️ Setup
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Sarthakzzzzz/portfolio.git
-   cd portfolio
-   ```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Clone and Deploy
 
-3. **Environment Configuration**
-   Create a `.env` file with:
-   ```env
-   SMTP_HOST=smtp.gmail.com
-   SMTP_PORT=587
-   SMTP_USER=your-email@gmail.com
-   SMTP_PASS=your-gmail-app-password
-   FROM_EMAIL=your-email@gmail.com
-   SITE_OWNER_EMAIL=your-email@gmail.com
-   REPLY_SUBJECT=Thanks for contacting us!
-   OPENAI_API_KEY=your-openrouter-api-key
-   MONGO_URI=your-mongodb-connection-string
-   SECRET_KEY=your-secret-key
-   ```
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
 
-4. **Run the application**
-   ```bash
-   python server.py
-   ```
-
-5. **Visit** `http://localhost:5000`
-
-## 🤖 AI Email System
-
-The portfolio features an intelligent email response system that:
-
-- Analyzes incoming messages using AI
-- Generates personalized responses based on resume context
-- References specific projects and achievements
-- Provides relevant GitHub links and contact information
-- Maintains professional yet enthusiastic tone
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── static/
-│   ├── assets/
-│   │   ├── css/          # Stylesheets
-│   │   ├── js/           # JavaScript files
-│   │   ├── resume/       # Resume files
-│   │   └── webfonts/     # Font files
-│   └── images/           # Images and icons
-├── templates/            # HTML templates
-├── server.py            # Main Flask application
-├── flask_app.py         # WSGI file for PythonAnywhere
-├── requirements.txt     # Python dependencies
-├── .env                 # Environment variables (not in repo)
-├── .gitignore          # Git ignore file
-└── README.md           # Project documentation
+```bash
+pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
 ```
 
-## 🚀 Deployment
+Then, run Next.js in development mode:
 
-### PythonAnywhere Deployment
+```bash
+pnpm dev
+```
 
-1. **Upload Files**
-   - Upload all project files to `/home/yourusername/mysite/`
-   - Or clone from GitHub: `git clone https://github.com/Sarthakzzzzz/portfolio.git mysite`
-
-2. **Install Dependencies**
-   ```bash
-   cd /home/yourusername/mysite
-   pip3.10 install --user -r requirements.txt
-   ```
-
-3. **Configure WSGI File**
-   - Go to Web tab in PythonAnywhere dashboard
-   - Set source code path: `/home/yourusername/mysite`
-   - Set WSGI configuration file: `/var/www/yourusername_pythonanywhere_com_wsgi.py`
-   - Replace content with:
-   ```python
-   import sys
-   import os
-   
-   path = '/home/yourusername/mysite'
-   if path not in sys.path:
-       sys.path.insert(0, path)
-   
-   from server import app as application
-   ```
-
-4. **Environment Variables**
-   - Create `.env` file in `/home/yourusername/mysite/`
-   - Add all required environment variables
-
-5. **Static Files**
-   - URL: `/static/`
-   - Directory: `/home/yourusername/mysite/static/`
-
-6. **Reload Web App**
-   - Click "Reload" button in Web tab
-
-## 📧 Contact
-
-- **Email**: sarthakpujari1970@gmail.com
-- **LinkedIn**: [linkedin.com/in/sarthakzzzzz](https://www.linkedin.com/in/sarthakzzzzz/)
-- **GitHub**: [github.com/Sarthakzzzzz](https://github.com/Sarthakzzzzz)
-- **Portfolio**: [sarthakzzzzz.pythonanywhere.com](https://sarthakzzzzz.pythonanywhere.com/)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-⭐ **Star this repository if you found it helpful!**
+Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
