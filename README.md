@@ -1,42 +1,55 @@
-# Portfolio Blog Starter
+# Sarthak Pujari — Portfolio
 
-This is a porfolio site template complete with a blog. Includes:
+Personal portfolio site built with Next.js 15, Tailwind v4, and MDX.
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
+## Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4
+- **Content**: MDX / Markdown blog posts
+- **Font**: Geist
+- **Analytics**: Vercel Speed Insights & Web Analytics
+
+## Features
+
+- Blog with MDX support and syntax highlighting
+- Projects carousel
+- Experience, Education, Skills & Achievements sections
 - Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+- RSS Feed & Sitemap
+- SEO optimized (JSON-LD schema, robots.txt)
+- Dark / Light mode toggle
 
-## Demo
-
-https://portfolio-blog-starter.vercel.app
-
-## How to Use
-
-You can choose from one of the following two methods to use this repository:
-
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+## Getting Started
 
 ```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
-```
-
-Then, run Next.js in development mode:
-
-```bash
+pnpm install
 pnpm dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+Open [http://localhost:3000](http://localhost:3000).
+
+## Project Structure
+
+```
+app/
+├── blog/          # Blog listing + MDX post pages
+├── components/    # UI components (nav, dock, mdx, etc.)
+├── data/          # portfolio.ts — single source of truth for all content
+├── og/            # Dynamic OG image route
+├── rss/           # RSS feed route
+├── contact/       # Contact page
+└── page.tsx       # Home page
+public/
+├── images/        # Profile photo
+├── certificates/  # Achievement certificates
+└── resume.pdf
+```
+
+## Customization
+
+All personal data (bio, projects, experience, skills, achievements, socials) lives in [`app/data/portfolio.ts`](app/data/portfolio.ts). Edit that file to update the site content.
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com). Push to `main` to trigger a deploy.
