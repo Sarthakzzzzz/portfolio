@@ -152,6 +152,15 @@ export const portfolioData: PortfolioData = {
       tags: ["Python", "Django", "spaCy", "scikit-learn", "NLP"],
       github: "https://github.com/Sarthakzzzzz/RateMyResume",
       deepDiveStatus: "Deep dive coming soon"
+    },
+    {
+      title: "NexMesh",
+      year: "2026",
+      category: "Federated Learning & Distributed Systems",
+      description: "Decentralized federated learning system enabling 3 independent clients to collaboratively train a CNN on MNIST while keeping raw training data local, with FedAvg-based model aggregation and GPU-accelerated distributed training.",
+      tags: ["Python", "PyTorch", "NVIDIA FLARE", "Docker", "Kubernetes", "CUDA"],
+      github: "https://github.com/Sarthakzzzzz/NexMesh",
+      deepDiveStatus: "Deep dive coming soon"
     }
   ],
   education: [
