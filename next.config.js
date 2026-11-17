@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Config options if needed
+  allowedDevOrigins: [process.env.PUBLIC_DOMAIN, process.env.LOCAL_DOMAIN],
 }
 
 module.exports = nextConfig

@@ -2,18 +2,58 @@
 
 import { useState } from 'react'
 import { portfolioData } from 'app/data/portfolio'
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [captchaToken, setCaptchaToken] = useState("");
+  const [captchaKey, setCaptchaKey] = useState(0);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const body = `Hi Sarthak,\n\nMy name is ${form.name} (${form.email}).\n\n${form.message}`
-    const mailto = `mailto:${portfolioData.socials.email}?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(body)}`
-    window.location.href = mailto
-    setSent(true)
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setError("");
+
+    try {
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({form,captchaToken}),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.message || "Something went wrong");
+        }
+
+        setSent(true);
+
+        setForm({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+        });
+
+    } catch (err) {
+        setError(
+            err instanceof Error
+                ? err.message
+                : "Failed to send message"
+        );
+    } finally {
+        setLoading(false);
+        setCaptchaToken("");
+        setCaptchaKey((prev) => prev + 1);
+    }
+  };
 
   const inputClass =
     'w-full rounded-md border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 px-3 py-2 text-sm text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 dark:placeholder:text-neutral-600 focus:outline-none focus:ring-2 focus:ring-neutral-400 dark:focus:ring-neutral-600 transition'
@@ -29,10 +69,10 @@ export default function ContactPage() {
 
       {sent ? (
         <div className="rounded-md border border-neutral-200 dark:border-neutral-800 p-6 text-center">
-          <p className="text-sm font-medium text-neutral-900 dark:text-neutral-50 mb-1">Your email client should have opened.</p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-400">If it didn't,{' '}
+          <p className="text-sm font-medium text-neutral-900 dark:text-neutral-50 mb-1">Message sent successfully!</p>
+          <p className="text-xs text-neutral-500 dark:text-neutral-400">I'll get back to you soon. You can also reach me at{' '}
             <a href={`mailto:${portfolioData.socials.email}`} className="underline underline-offset-4">
-              click here to email directly
+              {portfolioData.socials.email}
             </a>.
           </p>
           <button
@@ -92,12 +132,21 @@ export default function ContactPage() {
               className={inputClass + ' resize-none'}
             />
           </div>
-
+          <div className="flex justify-start">
+            <Turnstile
+              key={captchaKey}
+              siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+              onSuccess={(token) => setCaptchaToken(token)}
+              onExpire={() => setCaptchaToken("")}
+              onError={() => setCaptchaToken("")}
+            />
+          </div>
           <button
             type="submit"
-            className="w-full rounded-md bg-neutral-900 dark:bg-neutral-50 px-4 py-2 text-sm font-medium text-white dark:text-neutral-900 hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors"
-          >
-            Send Message
+            disabled={loading || !captchaToken}
+            className="w-full rounded-md bg-neutral-900 dark:bg-neutral-50 px-4 py-2 text-sm font-medium text-white dark:text-neutral-900 disabled:opacity-50 transition-colors">
+            {loading ? "Sending..." : "Send Message"}
+            {error && (<p className="text-sm text-red-500" role="alert">{error}</p>)}
           </button>
         </form>
       )}
