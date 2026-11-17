@@ -1,7 +1,0 @@
-Flask
-pymongo
-gunicorn
-dnspython
-requests
-python-dotenv
-openai
